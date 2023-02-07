@@ -1,0 +1,43 @@
+.loading-indicator:before {
+    content: '';
+    background: #000000cc;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.loading-indicator:after {
+    content: '';
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    z-index: 1001;
+    color: white;
+    animation: spinner 1.5s infinite;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    border-top-color:rgb(0, 255, 128);
+    justify-content: center; 
+}
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
